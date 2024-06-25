@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>class 08</title>
+    <link
+      rel="shortcut icon"
+      href="/favicon_io//android-chrome-192x192.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <h1>this is class 08</h1>
@@ -14,6 +19,26 @@
         alt=""
       /> -->
       <p class="setupImage">this is background image</p>
+      <div>
+        <picture>
+          <source
+            media="(min-width: 650px)"
+            srcset="
+              https://cdn.pixabay.com/photo/2023/04/11/18/35/pikachu-7917962_640.jpg
+            "
+          />
+          <source
+            media="(min-width: 465px)"
+            srcset="
+              https://mystickermania.com/cdn/stickers/pokemon/pkm-charmander-512x512.png
+            "
+          />
+          <img
+            src="https://i.pinimg.com/736x/d2/0a/b1/d20ab13a11f8c53256880366597ba346.jpg"
+            width="300px"
+          />
+        </picture>
+      </div>
     </div>
   </body>
 </html>
