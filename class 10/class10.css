@@ -1,0 +1,39 @@
+p.p1 {
+  margin: 0px;
+}
+.p2 {
+  margin: 0px;
+  margin-left: 50px;
+}
+.ulOne {
+  list-style-type: lower-roman;
+}
+li.liOne {
+  margin-left: -39px;
+}
+li.liTwo {
+  margin-left: -40px;
+}
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+  display: flex;
+  justify-content: space-evenly;
+}
+.styleLi {
+  /* float: center; */
+  float: left;
+}
+.styleA {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+.styleA:hover {
+  background-color: #111111;
+}
