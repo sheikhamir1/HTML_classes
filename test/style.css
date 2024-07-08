@@ -1,0 +1,110 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style the header */
+header {
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Style the hero section */
+.hero {
+  padding: 100px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Style the features section */
+.features {
+  padding: 50px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.features ul {
+  list-style-type: none;
+}
+
+.features ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Style the testimonial section */
+.testimonial {
+  padding: 50px;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.testimonial h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.testimonial-slider {
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial-item {
+  max-width: 400px;
+  margin: 0 20px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.testimonial-item p:last-child {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Style the footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+}
