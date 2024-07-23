@@ -3,86 +3,137 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animated Landing Page Elements</title>
+    <title>Pricing Table</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      /* Define keyframes for each animation */
-      @keyframes fadeIn {
-        0% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f8fafc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
       }
-
-      @keyframes slideInFromLeft {
-        0% {
-          transform: translateX(-100%);
-          opacity: 0;
-        }
-        100% {
-          transform: translateX(0);
-          opacity: 1;
-        }
+      .pricing-table {
+        display: flex;
+        gap: 20px;
       }
-
-      @keyframes scaleIn {
-        0% {
-          transform: scale(0);
-          opacity: 0;
-        }
-        100% {
-          transform: scale(1);
-          opacity: 1;
-        }
-      }
-
-      @keyframes rotateIn {
-        0% {
-          transform: rotate(-180deg);
-          opacity: 0;
-        }
-        100% {
-          transform: rotate(0);
-          opacity: 1;
-        }
-      }
-
-      /* Apply animations to different elements */
-      .element1 {
-        animation: fadeIn 1s ease-out forwards;
-      }
-
-      .element2 {
-        animation: slideInFromLeft 1.5s ease-out forwards;
-      }
-
-      .element3 {
-        animation: scaleIn 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
-      }
-
-      .element4 {
-        animation: rotateIn 1.5s ease-out forwards;
-      }
-
-      /* Basic styling for demonstration */
-      .element {
-        width: 200px;
-        height: 100px;
-        margin: 20px;
-        background-color: #f0f0f0;
-        border: 1px solid #ccc;
-        display: inline-block;
+      .pricing-card {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 300px;
         text-align: center;
-        line-height: 100px;
-        font-size: 18px;
+        position: relative;
+      }
+      .pricing-card.popular::after {
+        content: "Most popular";
+        background-color: #e5e7eb;
+        border-radius: 5px;
+        padding: 5px 10px;
+        color: #6b7280;
+        font-weight: 500;
+        font-size: 0.75rem;
+        position: absolute;
+        top: -10px;
+        right: 20px;
+      }
+      .pricing-card h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 20px 0;
+      }
+      .pricing-card p {
+        color: #6b7280;
+        margin: 20px 0;
+      }
+      .price {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #111827;
+      }
+      .price span {
+        font-size: 1rem;
+        font-weight: 400;
+        color: #6b7280;
+      }
+      .features {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+        text-align: left;
+      }
+      .features li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        color: #6b7280;
+      }
+      .features li::before {
+        content: "✔";
+        color: #6366f1;
+        margin-right: 10px;
+      }
+      .buy-button {
+        background-color: #6366f1;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: background-color 0.3s;
+      }
+      .buy-button:hover {
+        background-color: #4f46e5;
       }
     </style>
   </head>
   <body>
-    <div class="element element1">Element 1</div>
-    <div class="element element2">Element 2</div>
-    <div class="element element3">Element 3</div>
-    <div class="element element4">Element 4</div>
+    <div class="pricing-table">
+      <div class="pricing-card">
+        <h3>Freelancer</h3>
+        <p>The essentials to provide your best work for clients.</p>
+        <div class="price">$24<span>/month</span></div>
+        <ul class="features">
+          <li>5 products</li>
+          <li>Up to 1,000 subscribers</li>
+          <li>Basic analytics</li>
+          <li>48-hour support response time</li>
+        </ul>
+        <button class="buy-button">Buy plan</button>
+      </div>
+      <div class="pricing-card popular">
+        <h3>Startup</h3>
+        <p>A plan that scales with your rapidly growing business.</p>
+        <div class="price">$32<span>/month</span></div>
+        <ul class="features">
+          <li>25 products</li>
+          <li>Up to 10,000 subscribers</li>
+          <li>Advanced analytics</li>
+          <li>24-hour support response time</li>
+          <li>Marketing automations</li>
+        </ul>
+        <button class="buy-button">Buy plan</button>
+      </div>
+      <div class="pricing-card">
+        <h3>Enterprise</h3>
+        <p>Dedicated support and infrastructure for your company.</p>
+        <div class="price">$48<span>/month</span></div>
+        <ul class="features">
+          <li>Unlimited products</li>
+          <li>Unlimited subscribers</li>
+          <li>Advanced analytics</li>
+          <li>1-hour, dedicated support response time</li>
+          <li>Marketing automations</li>
+        </ul>
+        <button class="buy-button">Buy plan</button>
+      </div>
+    </div>
   </body>
 </html>

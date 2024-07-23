@@ -1,37 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Blog Cards</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar with Dropdown</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="card">
-        <img src="blog1.jpg" alt="Blog 1 Image" />
-        <div class="card-content">
-          <h2>Blog 1 Title</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <a href="blog1.html" class="btn">View Blog</a>
+    <nav class="navbar navbar2">
+      <div class="logo">
+        <h2 style="color: white; font-weight: bold; font-size: 20px">LOGO</h2>
+      </div>
+      <button
+        class="menuButton menuButton2"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        onclick="toggleMenu()"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="30"
+          viewBox="0 0 30 30"
+          class="SetSvg"
+        >
+          <rect width="30" height="4" rx="2" fill="#ffff"></rect>
+          <rect y="13" width="30" height="4" rx="2" fill="#ffff"></rect>
+          <rect y="26" width="30" height="4" rx="2" fill="#ffff"></rect>
+        </svg>
+      </button>
+      <div class="navLinks navLinks2">
+        <a href="#" class="active">Dashboard</a>
+        <a href="#">Team</a>
+        <a href="#">Projects</a>
+        <a href="#">Calendar</a>
+      </div>
+      <div class="profile profile2">
+        <button class="New1Btn hideBtn">+ Add New</button>
+        <button class="profileButton">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              d="M12 22c1.1 0 2-.9 2-2H10c0 1.1.9 2 2 2zm6-6V10c0-3.31-2.69-6-6-6S6 6.69 6 10v6l-2 2h16l-2-2z"
+            ></path>
+          </svg>
+        </button>
+        <button class="profileButton" onclick="toggleProfileMenu()">
+          <img
+            class="rounded-full h-fit w-fit"
+            src="https://sipl.ind.in/wp-content/uploads/2022/07/dummy-user.png"
+            alt="User Profile"
+            width="30"
+            height="40"
+          />
+        </button>
+        <div class="profileDropdown profileDropdown2">
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+          <a href="#">Logout</a>
         </div>
       </div>
-      <div class="card">
-        <img src="blog2.jpg" alt="Blog 2 Image" />
-        <div class="card-content">
-          <h2>Blog 2 Title</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <a href="blog2.html" class="btn">View Blog</a>
-        </div>
+      <div class="mobileMenu mobileMenu2">
+        <a href="#" class="active">Dashboard</a>
+        <a href="#">Team</a>
+        <a href="#">Projects</a>
+        <a href="#">Calendar</a>
+        <button class="New1Btn changeBtn">+ Add New</button>
       </div>
-      <div class="card">
-        <img src="blog3.jpg" alt="Blog 3 Image" />
-        <div class="card-content">
-          <h2>Blog 3 Title</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <a href="blog3.html" class="btn">View Blog</a>
-        </div>
-      </div>
-    </div>
-
-    <script src="main.js"></script>
+    </nav>
+    <script src="script.js"></script>
   </body>
 </html>

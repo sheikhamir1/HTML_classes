@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>class 12</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <style>
+    .name {
+      color: rgb(255, 255, 255);
+      background-color: rgb(0, 0, 0);
+    }
+    #html {
+      color: rgb(255, 255, 255);
+      background-color: rgb(0, 0, 0);
+    }
+    #css {
+      color: blue;
+      background-color: red;
+    }
+
+    .custom-button {
+      width: 150px;
+      height: 40px;
+      background-color: #bbff00;
+      color: #030202;
+      font-size: 19px;
+      font-weight: 600;
+      border-radius: 10px;
+    }
+    .custom-button:hover {
+      background-color: #00ccff;
+      color: #ffffff;
+    }
+    .left,
+    .right {
+      float: left;
+      width: 20%; /* The width is 20%, by default */
+    }
+    .main {
+      float: left;
+      width: 60%; /* The width is 60%, by default */
+    }
+    /* Use a media query to add a breakpoint at 800px: */
+    @media screen and (max-width: 600px) {
+      .left,
+      .main,
+      .right {
+        width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+      }
+    }
+  </style>
+
+  <body>
+    <h1>this is class 12</h1>
+
+    <div class="left" style="color: #bbff00">div left</div>
+    <div class="right" style="color: #bbff00">div right</div>
+    <div class="main" style="color: #bbff00">div main</div>
+
+    <p class="name">this is sohail</p>
+    <!-- <p class="name">this is pikacu</p>
+    <p class="name">this is balbasuar</p>
+    <p class="name">this is carmender</p> -->
+
+    <p class="html">this is html class</p>
+    <p id="css">this is html css class</p>
+
+    <script>
+      function displayResult() {
+        document.querySelector(".html").innerHTML = "this is now a css classe!";
+        document.querySelector(".html").style.color = "blue";
+        document.querySelector(".html").style.fontSize = "30px";
+        document.querySelector(".html").style.fontWeight = "900";
+      }
+    </script>
+
+    <button onclick="displayResult()">switch name</button>
+
+    <div>
+      <iframe src="https://shop.tesla.com/"></iframe>
+    </div>
+
+    <div>
+      <button class="custom-button">submit</button>
+    </div>
+
+    <h1 style="font-size: 10vw">Hello World</h1>
+  </body>
+</html>

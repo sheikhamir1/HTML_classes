@@ -1,110 +1,177 @@
-/* Reset some default styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Style the header */
-header {
-  padding: 20px;
-  background-color: #333;
-  color: #fff;
-}
-
-nav ul {
-  list-style-type: none;
-}
-
-nav ul li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #fff;
-}
-
-/* Style the hero section */
-.hero {
-  padding: 100px;
-  text-align: center;
-  background-color: #f1f1f1;
-}
-
-.hero h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-  text-decoration: none;
-}
-
-/* Style the features section */
-.features {
-  padding: 50px;
-  background-color: #fff;
-  text-align: center;
-}
-
-.features h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.features ul {
-  list-style-type: none;
-}
-
-.features ul li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-/* Style the testimonial section */
-.testimonial {
-  padding: 50px;
-  background-color: #f1f1f1;
-  text-align: center;
-}
-
-.testimonial h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.testimonial-slider {
+.navbar2 {
+  background-color: #1f2937;
+  padding: 0 16px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
 }
 
-.testimonial-item {
-  max-width: 400px;
-  margin: 0 20px;
-  padding: 20px;
-  background-color: #fff;
+.navbar2 .logo img {
+  height: 32px;
 }
 
-.testimonial-item p:last-child {
-  margin-top: 10px;
-  font-style: italic;
+.menuButton2 {
+  background: none;
+  border: none;
+  color: #d1d5db;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
 }
 
-/* Style the footer */
-footer {
-  padding: 20px;
-  text-align: center;
-  background-color: #333;
+.menuButton2:hover {
+  background-color: #374151;
   color: #fff;
+}
+
+.navLinks2 {
+  display: none;
+}
+
+.navLinks2 a {
+  color: #d1d5db;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.navLinks2 a:hover {
+  background-color: #374151;
+  color: #fff;
+}
+
+.navLinks2 a.active {
+  background-color: #111827;
+  color: #fff;
+}
+
+.profile2 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+
+.profileButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  color: #d1d5db;
+}
+
+.profileButton2:hover {
+  background-color: #374151;
+  color: #fff;
+}
+
+.profileDropdown2 {
+  display: none;
+  position: absolute;
+  top: 115%;
+  right: -16px;
+  background-color: #1f2937;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profileDropdown2 a {
+  display: block;
+  padding: 8px 16px;
+  color: #d1d5db;
+  text-decoration: none;
+}
+
+.profileDropdown2 a:hover {
+  background-color: #374151;
+  color: #fff;
+}
+
+.mobileMenu2 {
+  display: none;
+  flex-direction: column;
+  padding: 8px 0;
+  position: absolute;
+  top: 71px;
+  left: 8px;
+  width: 50%;
+  background-color: #1f2937;
+}
+
+.mobileMenu2 a {
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #d1d5db;
+  border-radius: 4px;
+}
+
+.mobileMenu2 a:hover {
+  background-color: #374151;
+  color: #fff;
+}
+
+.mobileMenu2 a.active {
+  background-color: #111827;
+  color: #fff;
+}
+
+.menuButton2.open ~ .mobileMenu2,
+.mobileMenu2.open {
+  display: flex;
+}
+
+.SetSvg {
+  color: #d1d5db;
+}
+
+/* @media (min-width: 640px) { */
+@media (min-width: 750px) {
+  .navLinks2 {
+    display: flex;
+    gap: 16px;
+  }
+
+  .menuButton2 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .navbar2 {
+    background-color: #1f2937;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+  }
+  .hideBtn {
+    display: none;
+  }
+}
+.New1Btn {
+  background-color: rgb(99 102 241 / 1);
+  color: #fff;
+  border: none;
+  padding: 8px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: small;
+}
+.changeBtn {
+  background-color: rgb(99 102 241 / 1);
+  color: #fff;
+  border: none;
+  padding: 8px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: small;
+  width: 100px;
+  margin-left: 15px;
+}
+.rounded-full {
+  border-radius: 50%;
 }

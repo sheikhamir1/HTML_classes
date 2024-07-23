@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar with Raw CSS</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Arial", sans-serif;
+      }
+
+      .navbar {
+        background-color: #1f2937; /* bg-gray-800 */
+        padding: 0 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 64px; /* h-16 */
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-links a {
+        color: #d1d5db; /* text-gray-300 */
+        padding: 8px 12px;
+        text-decoration: none;
+        border-radius: 4px;
+      }
+
+      .nav-links a:hover {
+        background-color: #374151; /* hover:bg-gray-700 */
+        color: #fff; /* hover:text-white */
+      }
+
+      .nav-links a.active {
+        background-color: #111827; /* bg-gray-900 */
+        color: #fff; /* text-white */
+      }
+
+      .logo img {
+        height: 32px; /* h-8 */
+      }
+
+      .menu-button {
+        background: none;
+        border: none;
+        color: #d1d5db; /* text-gray-400 */
+        cursor: pointer;
+        padding: 8px;
+        border-radius: 4px;
+      }
+
+      .menu-button:hover {
+        background-color: #374151; /* hover:bg-gray-700 */
+        color: #fff; /* hover:text-white */
+      }
+
+      .profile {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .profile img {
+        height: 32px; /* h-8 */
+        width: 32px; /* w-8 */
+        border-radius: 50%;
+      }
+
+      .profile-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        border-radius: 50%;
+        color: #d1d5db; /* text-gray-400 */
+      }
+
+      .profile-button:hover {
+        background-color: #374151; /* hover:bg-gray-700 */
+        color: #fff; /* hover:text-white */
+      }
+
+      /* Media Queries */
+      @media (min-width: 640px) {
+        .nav-links {
+          display: flex;
+          gap: 16px;
+        }
+
+        .menu-button {
+          display: none;
+        }
+      }
+
+      /* Mobile Menu */
+      .mobile-menu {
+        display: none;
+        flex-direction: column;
+        padding: 8px 0;
+        position: absolute;
+        top: 64px; /* height of navbar */
+        left: 0;
+        width: 100%;
+        background-color: #1f2937; /* bg-gray-800 */
+      }
+
+      .mobile-menu a {
+        padding: 8px 16px;
+        text-decoration: none;
+        color: #d1d5db; /* text-gray-300 */
+        border-radius: 4px;
+      }
+
+      .mobile-menu a:hover {
+        background-color: #374151; /* hover:bg-gray-700 */
+        color: #fff; /* hover:text-white */
+      }
+
+      .mobile-menu a.active {
+        background-color: #111827; /* bg-gray-900 */
+        color: #fff; /* text-white */
+      }
+
+      .menu-button.open ~ .mobile-menu {
+        display: flex;
+      }
+      .SetSvg {
+        color: #d1d5db;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <!-- <img src="" alt="Your Company" /> -->
+        <h2 style="color: white">LOGO</h2>
+      </div>
+      <button
+        class="menu-button"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        onclick="this.classList.toggle('open');"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="30"
+          viewBox="0 0 30 30"
+          class="SetSvg"
+        >
+          <rect width="30" height="4" rx="2" fill="#ffff" />
+          <rect y="13" width="30" height="4" rx="2" fill="#ffff" />
+          <rect y="26" width="30" height="4" rx="2" fill="#ffff" />
+        </svg>
+      </button>
+      <div class="nav-links">
+        <a href="#" class="active">Dashboard</a>
+        <a href="#">Team</a>
+        <a href="#">Projects</a>
+        <a href="#">Calendar</a>
+      </div>
+      <div class="profile">
+        <button class="profile-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              d="M12 22c1.1 0 2-.9 2-2H10c0 1.1.9 2 2 2zm6-6V10c0-3.31-2.69-6-6-6S6 6.69 6 10v6l-2 2h16l-2-2z"
+            />
+          </svg>
+        </button>
+        <button class="profile-button">
+          <img
+            src="https://sipl.ind.in/wp-content/uploads/2022/07/dummy-user.png"
+            alt="User Profile"
+          />
+        </button>
+      </div>
+      <div class="mobile-menu">
+        <a href="#" class="active">Dashboard</a>
+        <a href="#">Team</a>
+        <a href="#">Projects</a>
+        <a href="#">Calendar</a>
+      </div>
+    </nav>
+
+    <div>
+      <p
+        style="
+          text-align: center;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        Mobile :View
+      </p>
+    </div>
+    <script>
+      document
+        .querySelector(".menu-button")
+        .addEventListener("click", function () {
+          document.querySelector(".mobile-menu").classList.toggle("open");
+        });
+    </script>
+    <!-- End of Navbar -->
+  </body>
+</html>
