@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Feature Section</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
+    /> -->
+    <style>
+      .background {
+        /* background: linear-gradient(135deg, #b195cc, #87cefa); */
+      }
+    </style>
+  </head>
+  <body class="background">
+    <!-- HTML of Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <h2 style="color: white; font-weight: bold; font-size: 20px">LOGO</h2>
+      </div>
+      <button
+        class="menuButton"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        onclick="toggleMenu()"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="30"
+          viewBox="0 0 30 30"
+          class="SetSvg"
+        >
+          <rect width="30" height="4" rx="2" fill="#ffff"></rect>
+          <rect y="13" width="30" height="4" rx="2" fill="#ffff"></rect>
+          <rect y="26" width="30" height="4" rx="2" fill="#ffff"></rect>
+        </svg>
+      </button>
+      <div class="navLinks">
+        <a href="#" class="active">Dashboard</a>
+        <a href="#">Team</a>
+        <a href="#">Projects</a>
+        <a href="#">Calendar</a>
+      </div>
+      <div class="profile">
+        <button class="profileButton" onclick="toggleProfileMenu()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              d="M12 22c1.1 0 2-.9 2-2H10c0 1.1.9 2 2 2zm6-6V10c0-3.31-2.69-6-6-6S6 6.69 6 10v6l-2 2h16l-2-2z"
+            ></path>
+          </svg>
+        </button>
+        <button class="profileButton" onclick="toggleProfileMenu()">
+          <img
+            src="https://sipl.ind.in/wp-content/uploads/2022/07/dummy-user.png"
+            alt="User Profile"
+            width="30"
+            height="40"
+          />
+        </button>
+        <div class="profileDropdown">
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+          <a href="#">Logout</a>
+        </div>
+      </div>
+      <div class="mobileMenu">
+        <a href="#" class="active">Dashboard</a>
+        <a href="#">Team</a>
+        <a href="#">Projects</a>
+        <a href="#">Calendar</a>
+      </div>
+    </nav>
+    <script src="script.js"></script>
+  </body>
+</html>
